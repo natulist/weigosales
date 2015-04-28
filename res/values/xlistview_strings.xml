@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="xlistview_header_hint_normal">释放刷新</string>
+    <string name="xlistview_header_hint_ready">向下拉刷新</string>
+    <string name="xlistview_header_hint_loading">加载中...</string>
+    <string name="xlistview_header_last_time">上次更新：</string>
+    <string name="xlistview_footer_hint_normal">上拉刷新</string>
+    <string name="xlistview_footer_hint_ready">上拉刷新</string>
+    <string name="xlistview_footer_hint_loading">加载中</string>
+</resources>

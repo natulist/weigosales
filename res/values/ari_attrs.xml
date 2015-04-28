@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+   <declare-styleable name="RoundedImageView">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="round_background" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="android:src" />
+    </declare-styleable>
+    
+    <declare-styleable name="AsyncImageView">
+        <attr name="image_on_loading" format="reference" />
+        <attr name="image_on_fail" format="reference" />
+        <attr name="image_for_empty_url" format="reference" />
+        <attr name="round_rect_radius" format="dimension"/>
+    </declare-styleable>
+
+</resources>

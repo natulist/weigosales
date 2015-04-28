@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.weigo.sales"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:name=".SalesApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.LaunchActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AnimActivityTheme"
+            android:screenOrientation="portrait"
+             >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.weigo.sales.activity.main.MainTabActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AnimActivityTheme"
+            android:screenOrientation="portrait"
+             >
+            <intent-filter>
+                <action android:name="com.weigo.sales.intent.main" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AnimActivityTheme"
+            android:screenOrientation="portrait"
+             >
+            <intent-filter>
+                <action android:name="com.weigo.sales.intent.login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.weigo.sales.activity.image.PictureViewActivity"
+            android:theme="@style/AnimActivityTheme"
+             >
+            <intent-filter>
+                <action android:name="com.weigo.sales.intent.viewpic" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.weigo.sales.activity.share.ShareActivity"
+            android:theme="@style/AnimActivityTheme"
+             >
+            <intent-filter>
+                <action android:name="com.weigo.sales.intent.share" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.weigo.sales.activity.upload.UploadActivity"
+            android:theme="@style/AnimActivityTheme"
+             >
+            <intent-filter>
+                <action android:name="com.weigo.sales.intent.edit" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class BaseFragment extends Fragment {
 
+public class BaseFragment extends Fragment {
 	protected View mContentView;
 	private boolean mFirstVisible = false;
 	@Override

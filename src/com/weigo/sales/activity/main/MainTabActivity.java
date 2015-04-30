@@ -142,7 +142,7 @@ public class MainTabActivity extends BaseTitleActivity {
 	protected void initTitle() {
 		setTitleText(R.string.app_name);
 		enableBack(true);
-		enableMenu(R.drawable.logout,new OnClickListener() {
+		enableMenu("注销",new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {

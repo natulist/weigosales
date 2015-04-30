@@ -81,9 +81,9 @@ public class GoodsFragment extends NetworkBaseFragment {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				mJsonProvider.setKey(searchEditText.getText().toString());
 				pullRefresh();
+				//TODO:进度框
 			}
 		});
 		

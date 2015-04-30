@@ -35,7 +35,7 @@ public class LaunchActivity extends BaseActivity {
             public void run() {
                 gotoEntry();
             }
-        }, 2000);
+        }, 1000);
 	}
 
 

@@ -4,12 +4,15 @@
    	style="@style/title"
     >
 
-    <ImageView
+    <TextView
         android:id="@+id/title_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_margin="4dip"
+        android:layout_marginLeft="12dp"
+        style="@style/title_text"
+        android:text="返回"
+        android:visibility="gone"
          />
 
     <TextView
@@ -22,13 +25,16 @@
         style="@style/title_text"
         android:text="state" />
     
-    <ImageView
+    <TextView
         android:id="@+id/title_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="4dip"
+        android:layout_marginRight="12dp"
+        style="@style/title_text"
+        android:text="注销"
+        
         />
 
 </RelativeLayout>

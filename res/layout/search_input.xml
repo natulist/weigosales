@@ -15,7 +15,7 @@
         android:layout_height="fill_parent"
         android:layout_marginLeft="0dp"
         android:background="@null"
-        android:hint="输入关键词"
+        android:hint="输入搜索关键词"
         android:imeOptions="actionSearch"
         android:layout_centerVertical="true"
         android:singleLine="true"

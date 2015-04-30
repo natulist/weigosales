@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:orientation="vertical" >
 
-    <include layout="@layout/search_input" />
+    
 
     <com.weigo.widget.listview.XListView
         xmlns:android="http://schemas.android.com/apk/res/android"

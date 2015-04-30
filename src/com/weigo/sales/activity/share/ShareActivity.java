@@ -2,6 +2,7 @@ package com.weigo.sales.activity.share;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -23,6 +24,7 @@ import com.weigo.sales.SHContext;
 import com.weigo.sales.activity.base.BaseTitleActivity;
 import com.weigo.sales.activity.goods.BaseShopInfo;
 import com.weigo.sales.activity.goods.GridImageViewAdapter;
+import com.weigo.sales.activity.goods.ImageInfo;
 import com.weigo.sales.data.ShopSingleton;
 
 /**
@@ -68,7 +70,10 @@ public class ShareActivity extends BaseTitleActivity {
 		public void onEvent(ShareEvent event) {
 			if (event.status == NetworkError.SUCCESS) {
 				goodsInfo = event.apps;
-				adapter = new GridImageViewAdapter(SHContext.getInstance().getApplicationContext(), event.apps.imageInfos, 9);
+				List<ImageInfo> tmp = event.apps.imageInfos;
+				ImageInfo add = new ImageInfo();
+				tmp.add(add);
+				adapter = new GridImageViewAdapter(SHContext.getInstance().getApplicationContext(), tmp, 10);
 				gridView.setAdapter(adapter);
 			}
 
@@ -90,7 +95,7 @@ public class ShareActivity extends BaseTitleActivity {
 		// TODO Auto-generated method stub
 		super.initTitle();
 		setTitleText(R.string.share_title);
-		enableMenu(R.drawable.tab_zhuanfa_normal, new OnClickListener() {
+		enableMenu("发送", new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

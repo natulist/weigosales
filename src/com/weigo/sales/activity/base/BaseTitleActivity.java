@@ -17,7 +17,7 @@ import android.widget.TextView;
 public abstract class BaseTitleActivity extends BaseActivity {
 
 	private TextView mTitleText;
-	private ImageView mBackButton, mMenuButton;
+	private TextView mBackButton, mMenuButton;
 	private RelativeLayout mTitleBar;
 	
 	@Override
@@ -29,8 +29,8 @@ public abstract class BaseTitleActivity extends BaseActivity {
 		
 		mTitleBar = (RelativeLayout)view.findViewById(R.id.title_bar);
 		mTitleText = (TextView) view.findViewById(R.id.title_text);
-		mBackButton = (ImageView) view.findViewById(R.id.title_back);		
-		mMenuButton = (ImageView) view.findViewById(R.id.title_menu);	
+		mBackButton = (TextView) view.findViewById(R.id.title_back);		
+		mMenuButton = (TextView) view.findViewById(R.id.title_menu);	
 		View contentView = loadContent();		
 		initTitle();
 		onContentCreate(savedInstanceState, contentView);
@@ -107,11 +107,12 @@ public abstract class BaseTitleActivity extends BaseActivity {
 		}
 	}
 	
-	protected void enableMenu(int resid, View.OnClickListener onClickListener) {
+	protected void enableMenu(String str, View.OnClickListener onClickListener) {
 		if (onClickListener != null) {
 			mMenuButton.setVisibility(View.VISIBLE);
 			mMenuButton.setOnClickListener(onClickListener);
-			mMenuButton.setImageResource(resid);
+			mMenuButton.setText(str);
+//			mMenuButton.setImageResource(resid);
 			
 		} else {
 			mMenuButton.setVisibility(View.GONE);

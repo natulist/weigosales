@@ -61,6 +61,8 @@
         </activity>
         <activity android:name="com.weigo.sales.activity.share.ShareActivity"
             android:theme="@style/AnimActivityTheme"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan"
              >
             <intent-filter>
                 <action android:name="com.weigo.sales.intent.share" />

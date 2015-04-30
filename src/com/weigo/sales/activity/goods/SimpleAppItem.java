@@ -90,7 +90,7 @@ public class SimpleAppItem extends AbstractListItem {
 			holder.appNameText = (TextView) v.findViewById(R.id.user_item_name);
 			holder.appSizeText = (TextView) v.findViewById(R.id.user_item_info);
 			holder.gridView = (MyGridView) v.findViewById(R.id.image_grid);
-//			holder.shareBtn = (Button) v.findViewById(R.id.share);
+			holder.shareBtn = (Button) v.findViewById(R.id.share);
 			holder.editBtn = (Button) v.findViewById(R.id.edit);
 //			holder.buyBtn = (Button) v.findViewById(R.id.buy);
 			v.setTag(holder);
@@ -106,18 +106,18 @@ public class SimpleAppItem extends AbstractListItem {
 		viewHolder.appNameText.setText(mAppInfo.getShopName());
 		viewHolder.appSizeText.setText(mAppInfo.getGoodsTitle());
 		viewHolder.appIcon.setImageResource(R.drawable.ic_launcher);
-//		viewHolder.shareBtn.setOnClickListener(new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				Intent intent = new Intent(Constants.intent.SHARE);
-//				ShopSingleton.getInstance().mBaseShopInfo = mAppInfo;
-//				ShopSingleton.getInstance().imageInfos = mAppInfo.imageInfos;
-//
-//				// intent.putExtra("data", mAppInfo);
-//				v.getContext().startActivity(intent);
-//			}
-//		});
+		viewHolder.shareBtn.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(Constants.intent.SHARE);
+				ShopSingleton.getInstance().mBaseShopInfo = mAppInfo;
+				ShopSingleton.getInstance().imageInfos = mAppInfo.imageInfos;
+
+				// intent.putExtra("data", mAppInfo);
+				v.getContext().startActivity(intent);
+			}
+		});
 
 		viewHolder.editBtn.setOnClickListener(new OnClickListener() {
 
@@ -182,7 +182,7 @@ public class SimpleAppItem extends AbstractListItem {
 		public TextView appNameText;
 		public TextView appSizeText;
 		public MyGridView gridView;
-//		public Button shareBtn;
+		public Button shareBtn;
 		public Button editBtn;
 //		public Button buyBtn;
 	}

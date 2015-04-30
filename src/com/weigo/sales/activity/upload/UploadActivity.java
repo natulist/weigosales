@@ -120,7 +120,7 @@ public class UploadActivity extends BaseTitleActivity {
 		// TODO Auto-generated method stub
 		super.initTitle();
 		setTitleText(R.string.edit_title);
-		enableMenu(R.drawable.ic_upload, new OnClickListener() {
+		enableMenu("上传", new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

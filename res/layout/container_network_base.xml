@@ -4,6 +4,14 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
+    <include layout="@layout/search_input" />
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="80dp"
+    	android:background="#00ff00"
+    	android:layout_marginBottom="12dp"
+        ></FrameLayout>
     
     <ViewStub android:id="@+id/stub_content" 
 	    android:layout_width="fill_parent" 

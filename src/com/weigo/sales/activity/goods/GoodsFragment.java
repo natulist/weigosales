@@ -19,6 +19,7 @@ import com.app.framework.log.NLog;
 import com.app.framework.network.http.NetworkError;
 import com.app.framework.notification.NotificationCenter;
 import com.app.framework.notification.Subscriber;
+import com.app.framework.notification.TopicSubscriber;
 import com.app.framework.util.CollectionUtils;
 import com.weigo.base.http.JsonLoader;
 import com.weigo.base.utils.UIUtil;
@@ -77,6 +78,7 @@ public class GoodsFragment extends NetworkBaseFragment {
 		mJsonLoader = new JsonLoader(mJsonProvider);
 		NotificationCenter.defaultCenter().subscriber(GoodsListEvent.class, mSubscriber);
 		
+		NotificationCenter.defaultCenter().subscriber("reload_goods", mSubscriberReloadGoods);
 		searchButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -199,6 +201,13 @@ public class GoodsFragment extends NetworkBaseFragment {
 		}
 	}
 
+	private TopicSubscriber<Void> mSubscriberReloadGoods = new TopicSubscriber<Void>() {
+
+        @Override
+        public void onEvent(String topic, Void data) {
+            doReload();
+        }};
+	
 	private Subscriber<GoodsListEvent> mSubscriber = new Subscriber<GoodsListEvent>() {
 
 		@Override
@@ -326,6 +335,7 @@ public class GoodsFragment extends NetworkBaseFragment {
 	@Override
 	public void onDestroy() {
 		NotificationCenter.defaultCenter().unsubscribe(GoodsListEvent.class, mSubscriber);
+		NotificationCenter.defaultCenter().unsubscribe("reload_goods", mSubscriberReloadGoods);
 		super.onDestroy();
 		mHandler.removeMessages(MSG_AUTO_REFRESH);
 		mHandler.removeMessages(MSG_REFRESH_TIMEOUT);

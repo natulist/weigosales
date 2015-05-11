@@ -18,8 +18,8 @@ import com.weigo.sales.activity.goods.ImageInfo;
 public class ShopSingleton {
 
 	public int index;
-	public BaseShopInfo mBaseShopInfo;
-	public List<ImageInfo> imageInfos;
+	public BaseShopInfo mBaseShopInfo; //當前寶貝信息
+	public List<ImageInfo> imageInfos; //当前显示的宝贝圖片
 	
 	private static class SingletonHolder{
 		static final ShopSingleton INSTANCE = new ShopSingleton();

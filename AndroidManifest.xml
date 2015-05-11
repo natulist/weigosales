@@ -74,11 +74,22 @@
             android:theme="@style/AnimActivityTheme"
              >
             <intent-filter>
+                <action android:name="com.weigo.sales.intent.upload" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.weigo.sales.activity.edit.EditActivity"
+            android:theme="@style/AnimActivityTheme"
+             >
+            <intent-filter>
                 <action android:name="com.weigo.sales.intent.edit" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:exported="true"

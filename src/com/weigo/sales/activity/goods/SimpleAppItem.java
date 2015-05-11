@@ -91,7 +91,7 @@ public class SimpleAppItem extends AbstractListItem {
 			holder.appSizeText = (TextView) v.findViewById(R.id.user_item_info);
 			holder.gridView = (MyGridView) v.findViewById(R.id.image_grid);
 			holder.shareBtn = (Button) v.findViewById(R.id.share);
-			holder.editBtn = (Button) v.findViewById(R.id.edit);
+//			holder.editBtn = (Button) v.findViewById(R.id.edit);
 //			holder.buyBtn = (Button) v.findViewById(R.id.buy);
 			v.setTag(holder);
 		}
@@ -119,18 +119,18 @@ public class SimpleAppItem extends AbstractListItem {
 			}
 		});
 
-		viewHolder.editBtn.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO edit
-				Intent intent = new Intent(Constants.intent.EDIT);
-				ShopSingleton.getInstance().mBaseShopInfo = mAppInfo;
-				ShopSingleton.getInstance().imageInfos = mAppInfo.imageInfos;
-
-				v.getContext().startActivity(intent);
-			}
-		});
+//		viewHolder.editBtn.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				// TODO edit
+//				Intent intent = new Intent(Constants.intent.EDIT);
+//				ShopSingleton.getInstance().mBaseShopInfo = mAppInfo;
+//				ShopSingleton.getInstance().imageInfos = mAppInfo.imageInfos;
+//
+//				v.getContext().startActivity(intent);
+//			}
+//		});
 		
 //		viewHolder.buyBtn.setOnClickListener(new OnClickListener() {
 //			
@@ -150,12 +150,12 @@ public class SimpleAppItem extends AbstractListItem {
 //			}
 //		});
 		
-		String userType = PrefsUtils.loadPrefString(SHContext.getInstance().getApplicationContext(), Constants.user_type);
-		if ((userType == null) || userType.equalsIgnoreCase(LoginActivity.USER_ID + "")) {
-			viewHolder.editBtn.setVisibility(View.GONE);
-		} else {
-			viewHolder.editBtn.setVisibility(View.VISIBLE);
-		}
+//		String userType = PrefsUtils.loadPrefString(SHContext.getInstance().getApplicationContext(), Constants.user_type);
+//		if ((userType == null) || userType.equalsIgnoreCase(LoginActivity.USER_ID + "")) {
+//			viewHolder.editBtn.setVisibility(View.GONE);
+//		} else {
+//			viewHolder.editBtn.setVisibility(View.VISIBLE);
+//		}
 		// 显示图片
 		if (!TextUtils.isEmpty(mAppInfo.getShopIcon())) {
 			viewHolder.appIcon.displayImage(HostNameResolver.resovleURL(mAppInfo.getShopIcon()));
@@ -183,7 +183,7 @@ public class SimpleAppItem extends AbstractListItem {
 		public TextView appSizeText;
 		public MyGridView gridView;
 		public Button shareBtn;
-		public Button editBtn;
+//		public Button editBtn;
 //		public Button buyBtn;
 	}
 }

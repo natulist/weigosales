@@ -90,6 +90,7 @@
                 android:textSize="18sp"
                 android:background="@drawable/button_white_anim"
                 android:textColor="@color/black"
+                android:visibility="gone"
                 android:text="编辑" />
 
             <Button

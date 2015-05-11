@@ -104,11 +104,11 @@
         android:layout_above="@id/bottom"
         android:layout_below="@id/cb_link"
         android:gravity="center"
-        android:horizontalSpacing="10dp"
-        android:numColumns="3"
+        android:horizontalSpacing="8dp"
+        android:numColumns="4"
         android:paddingTop="16dp"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="10dp" >
+        android:verticalSpacing="8dp" >
     </GridView>
 
 </RelativeLayout>
